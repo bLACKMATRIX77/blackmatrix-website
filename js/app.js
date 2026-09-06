@@ -89,14 +89,29 @@ function initNavigation() {
   // Mobile Hamburger Navigation Toggle & Auto-Close
   const mobileMenuBtn = document.getElementById('mobile-menu-btn');
   const mobileNavMenu = document.getElementById('mobile-nav-menu');
+  const mobileMenuBackdrop = document.getElementById('mobile-menu-backdrop');
   const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
 
   if (mobileMenuBtn && mobileNavMenu) {
+    function toggleMobileMenu(open) {
+      const shouldOpen = open !== undefined ? open : !mobileNavMenu.classList.contains('active');
+      mobileNavMenu.classList.toggle('active', shouldOpen);
+      mobileMenuBtn.classList.toggle('active', shouldOpen);
+      if (mobileMenuBackdrop) {
+        mobileMenuBackdrop.classList.toggle('active', shouldOpen);
+      }
+    }
+
     mobileMenuBtn.addEventListener('click', (e) => {
       e.stopPropagation();
-      const isOpen = mobileNavMenu.classList.toggle('active');
-      mobileMenuBtn.classList.toggle('active', isOpen);
+      toggleMobileMenu();
     });
+
+    if (mobileMenuBackdrop) {
+      mobileMenuBackdrop.addEventListener('click', () => {
+        toggleMobileMenu(false);
+      });
+    }
 
     mobileNavLinks.forEach(link => {
       link.addEventListener('click', (e) => {
@@ -104,18 +119,18 @@ function initNavigation() {
         if (href && href.startsWith('#')) {
           e.preventDefault();
           const targetId = href.substring(1);
-          mobileNavMenu.classList.remove('active');
-          mobileMenuBtn.classList.remove('active');
+          toggleMobileMenu(false);
           scrollToSection(targetId);
+        } else {
+          toggleMobileMenu(false);
         }
       });
     });
 
     // Close when clicking outside
     document.addEventListener('click', (e) => {
-      if (!mobileNavMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
-        mobileNavMenu.classList.remove('active');
-        mobileMenuBtn.classList.remove('active');
+      if (mobileNavMenu.classList.contains('active') && !mobileNavMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+        toggleMobileMenu(false);
       }
     });
   }

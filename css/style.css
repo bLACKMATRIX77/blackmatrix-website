@@ -1989,78 +1989,259 @@ input:checked + .slider-switch:before {
   background: var(--cyan);
 }
 
-/* Mobile Navigation Drawer Overlay (Hidden on Desktop) */
+/* Mobile Navigation Drawer Backdrop & Overlay */
+.mobile-menu-backdrop {
+  display: none;
+  position: fixed;
+  top: 76px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(4, 6, 12, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 98;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+
+.mobile-menu-backdrop.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 .mobile-nav-menu {
   display: none;
   position: fixed;
   top: 76px;
   left: 0;
   right: 0;
-  background: rgba(7, 9, 14, 0.98);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  border-bottom: 1px solid var(--border-glass);
-  padding: 18px 20px 24px;
+  background: linear-gradient(180deg, rgba(10, 14, 26, 0.98) 0%, rgba(6, 9, 18, 0.99) 100%);
+  border-bottom: 1px solid rgba(0, 242, 254, 0.28);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.9), 0 0 30px rgba(0, 242, 254, 0.08);
+  padding: 16px 18px 24px;
   transform: translateY(-120%);
   opacity: 0;
   pointer-events: none;
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
   z-index: 99;
+  max-height: calc(100vh - 76px);
+  overflow-y: auto;
 }
 
 .mobile-nav-menu.active {
   transform: translateY(0);
   opacity: 1;
   pointer-events: auto;
-  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.85);
-  max-height: calc(100vh - 76px);
-  overflow-y: auto;
 }
 
 .mobile-nav-inner {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
 }
 
+/* HUD Header in Mobile Menu */
+.mobile-nav-hud-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 4px 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  margin-bottom: 4px;
+}
+
+.hud-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--text-dim);
+}
+
+.hud-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #10b981;
+  letter-spacing: 1px;
+}
+
+.hud-dot.pulse {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 8px #10b981;
+  animation: pulseDot 2s infinite ease-in-out;
+}
+
+/* Cyber Mobile Nav Links */
 .mobile-nav-link {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 13px 18px;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  color: #cbd5e1;
+  justify-content: space-between;
+  padding: 13px 15px;
+  border-radius: 10px;
+  background: rgba(16, 22, 38, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-left: 3px solid transparent;
+  color: #e2e8f0;
   text-decoration: none;
-  font-size: 0.98rem;
-  font-weight: 600;
-  letter-spacing: 0.3px;
-  transition: all 0.15s ease;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mobile-link-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mobile-icon-box {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #94a3b8;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.mobile-link-title {
+  color: #e2e8f0;
+  letter-spacing: 0.8px;
+  font-size: 0.92rem;
+}
+
+.mobile-link-meta {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  letter-spacing: 1px;
+}
+
+.mobile-badge-live {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  padding: 3px 8px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.2);
 }
 
 .mobile-nav-link:active,
 .mobile-nav-link:hover,
 .mobile-nav-link.active {
-  background: rgba(0, 242, 254, 0.12);
-  border-color: rgba(0, 242, 254, 0.4);
-  color: var(--cyan);
+  background: linear-gradient(90deg, rgba(0, 242, 254, 0.12) 0%, rgba(16, 22, 38, 0.9) 100%);
+  border-color: rgba(0, 242, 254, 0.35);
+  border-left: 3px solid #00f2fe;
+  color: #00f2fe;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4), 0 0 16px rgba(0, 242, 254, 0.15);
+  transform: translateX(3px);
 }
 
-.mobile-nav-discord-btn {
+.mobile-nav-link.active .mobile-icon-box,
+.mobile-nav-link:hover .mobile-icon-box {
+  color: #00f2fe;
+  border-color: rgba(0, 242, 254, 0.4);
+  background: rgba(0, 242, 254, 0.15);
+  box-shadow: 0 0 10px rgba(0, 242, 254, 0.3);
+}
+
+.mobile-nav-link.active .mobile-link-title {
+  color: #ffffff;
+  text-shadow: 0 0 12px rgba(0, 242, 254, 0.5);
+}
+
+/* Discord Cyber CTA Banner in Mobile Menu */
+.mobile-nav-discord-cyber {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 13px 16px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(88, 101, 242, 0.22) 0%, rgba(147, 51, 234, 0.18) 100%);
+  border: 1px solid rgba(88, 101, 242, 0.45);
+  text-decoration: none;
+  margin-top: 6px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(88, 101, 242, 0.18);
+}
+
+.mobile-discord-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mobile-discord-icon-wrapper {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: #5865f2;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  padding: 14px;
-  border-radius: 12px;
-  background: #5865f2;
-  color: #ffffff !important;
-  text-decoration: none;
-  font-size: 0.95rem;
-  font-weight: 700;
-  margin-top: 10px;
-  box-shadow: 0 4px 20px rgba(88, 101, 242, 0.45);
+  color: #ffffff;
+  box-shadow: 0 0 14px rgba(88, 101, 242, 0.6);
+  flex-shrink: 0;
+}
+
+.mobile-discord-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.mobile-discord-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  color: #ffffff;
+}
+
+.mobile-discord-count {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: #a5b4fc;
+}
+
+.mobile-discord-arrow {
+  font-size: 1.2rem;
+  color: #818cf8;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+}
+
+.mobile-nav-discord-cyber:active,
+.mobile-nav-discord-cyber:hover {
+  background: linear-gradient(135deg, rgba(88, 101, 242, 0.35) 0%, rgba(147, 51, 234, 0.28) 100%);
+  border-color: rgba(129, 140, 248, 0.7);
+  box-shadow: 0 6px 26px rgba(88, 101, 242, 0.35);
+  transform: translateY(-2px);
+}
+
+.mobile-nav-discord-cyber:hover .mobile-discord-arrow {
+  transform: translateX(3px);
+  color: #ffffff;
 }
 
 /* ==========================================================================
@@ -2115,6 +2296,11 @@ input:checked + .slider-switch:before {
   }
 
   .mobile-nav-menu {
+    display: block;
+    top: 66px;
+  }
+
+  .mobile-menu-backdrop {
     display: block;
     top: 66px;
   }
@@ -2482,6 +2668,11 @@ input:checked + .slider-switch:before {
   }
 
   .mobile-nav-menu {
+    top: 60px;
+    max-height: calc(100vh - 60px);
+  }
+
+  .mobile-menu-backdrop {
     top: 60px;
   }
 
