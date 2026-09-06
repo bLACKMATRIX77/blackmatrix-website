@@ -63,8 +63,9 @@ function initNavigation() {
       behavior: 'smooth'
     });
 
+    const cleanPath = targetId === 'hero' ? '/' : `/${targetId}`;
     if (history.pushState) {
-      history.pushState(null, null, `#${targetId}`);
+      history.pushState({ section: targetId }, '', cleanPath);
     }
 
     clearTimeout(clickTimeout);
@@ -157,23 +158,38 @@ function initNavigation() {
     }
 
     setActiveLink(currentId);
+
+    if (!isManualClick && history.replaceState) {
+      const cleanPath = currentId === 'hero' ? '/' : `/${currentId}`;
+      if (window.location.pathname !== cleanPath) {
+        history.replaceState({ section: currentId }, '', cleanPath);
+      }
+    }
   }
 
   window.addEventListener('scroll', onScroll, { passive: true });
 
-  // Initial check on load
-  if (window.location.hash) {
-    const hashId = window.location.hash.substring(1);
-    if (sectionIds.includes(hashId)) {
-      setTimeout(() => {
-        scrollToSection(hashId);
-      }, 100);
-    } else {
-      onScroll();
-    }
+  // Initial check on load (clean URL path, sessionStorage from 404 router, or hash)
+  const currentPath = window.location.pathname.replace(/^\/|\/$/g, '').toLowerCase();
+  const storedSection = sessionStorage.getItem('targetSection');
+  if (storedSection) sessionStorage.removeItem('targetSection');
+
+  const targetInit = storedSection || (sectionIds.includes(currentPath) ? currentPath : null) || (window.location.hash ? window.location.hash.substring(1) : null);
+
+  if (targetInit && sectionIds.includes(targetInit)) {
+    setTimeout(() => {
+      scrollToSection(targetInit);
+    }, 150);
   } else {
     onScroll();
   }
+
+  // Handle browser back/forward history navigation
+  window.addEventListener('popstate', () => {
+    const popPath = window.location.pathname.replace(/^\/|\/$/g, '').toLowerCase();
+    const sec = sectionIds.includes(popPath) ? popPath : 'hero';
+    scrollToSection(sec);
+  });
 }
 
 /* ==========================================================================
