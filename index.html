@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BLΛCKMΛTRIX — Next-Gen Cheats & Bots 2026</title>
+  <meta name="description" content="BLΛCKMΛTRIX is the premier platform for next-gen gaming software, aimbots, ESP, and 24/7 mobile farming bots. Undetected, secure, and ultra-fast.">
+  
+  <!-- Favicon / Brand Logo -->
+  <link rel="icon" type="image/jpeg" href="./logos/blackmatrix_logo.jpg">
+  
+  <!-- Modern Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet with Cache-Buster -->
+  <link rel="stylesheet" href="./css/style.css?v=2026.30">
+
+  <style>
+    
+/* Discord Navbar Button */
+.nav-discord-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  background: rgba(88, 101, 242, 0.14);
+  border: 1px solid rgba(88, 101, 242, 0.45);
+  color: #ffffff;
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  text-decoration: none;
+  box-shadow: 0 0 15px rgba(88, 101, 242, 0.25);
+  transition: all var(--transition-fast);
+}
+
+.nav-discord-btn:hover {
+  background: #5865f2;
+  border-color: #5865f2;
+  box-shadow: 0 0 22px rgba(88, 101, 242, 0.6);
+  transform: translateY(-1px);
+  color: #ffffff;
+}
+
+.discord-nav-icon {
+  width: 18px;
+  height: 18px;
+  fill: #5865f2;
+  transition: fill var(--transition-fast);
+}
+
+.nav-discord-btn:hover .discord-nav-icon {
+  fill: #ffffff;
+}
+
+    /* Section scroll offset for fixed/sticky navbar */
+    section {
+      scroll-margin-top: 80px;
+    }
+
+    /* Glowing Navbar Active State */
+    .nav-link {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      font-weight: 500;
+      transition: all var(--transition-fast);
+      padding: 8px 16px;
+      border-radius: var(--radius-sm);
+      border: 1px solid transparent;
+      position: relative;
+    }
+    .nav-link:hover {
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.06);
+    }
+    .nav-link.active {
+      color: #00f2fe !important;
+      background: rgba(0, 242, 254, 0.12) !important;
+      border: 1px solid rgba(0, 242, 254, 0.45) !important;
+      box-shadow: 0 0 16px rgba(0, 242, 254, 0.3) !important;
+      font-weight: 700 !important;
+    }
+    .nav-link.active::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 15%;
+      right: 15%;
+      height: 2px;
+      background: #00f2fe;
+      box-shadow: 0 0 10px #00f2fe, 0 0 20px #00f2fe;
+      border-radius: 2px;
+    }
+
+    /* BLΛCKMΛTRIX 2026 - Premium Status Cyber Cards */
+    .status-section {
+      padding: 60px 0 90px;
+      position: relative;
+    }
+    .status-header-wrap {
+      text-align: center;
+      margin-bottom: 42px;
+      position: relative;
+    }
+    .status-cyber-title {
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-weight: 900;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      background: linear-gradient(135deg, #ffffff 0%, #00f2fe 50%, #ec4899 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+      filter: drop-shadow(0 0 30px rgba(0, 242, 254, 0.4));
+      margin-bottom: 0;
+    }
+    .status-title-glow-line {
+      width: 90px;
+      height: 3px;
+      background: linear-gradient(90deg, #00f2fe, #ec4899);
+      border-radius: 3px;
+      margin: 14px auto 0;
+      box-shadow: 0 0 16px rgba(0, 242, 254, 0.7), 0 0 8px rgba(236, 72, 153, 0.7);
+    }
+    .status-category-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.95rem;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin: 32px 0 14px 4px;
+    }
+    .status-category-header.cat-cheats {
+      color: #00f2fe;
+    }
+    .status-category-header.cat-bots {
+      color: #ec4899;
+    }
+    .status-category-header.cat-tools {
+      color: #f59e0b;
+    }
+    .status-cards-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .status-cyber-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 22px;
+      background: rgba(14, 18, 30, 0.82);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 12px;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+      gap: 20px;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
+    }
+    .status-cyber-row:hover {
+      background: rgba(20, 26, 44, 0.98);
+      border-color: rgba(0, 242, 254, 0.4);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 242, 254, 0.12);
+    }
+    .status-cyber-row.bot-row:hover {
+      border-color: rgba(236, 72, 153, 0.4);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(236, 72, 153, 0.12);
+    }
+    .status-info-side {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      min-width: 250px;
+    }
+    .status-thumb-wrapper {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .status-thumb-wrapper img {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+      display: block;
+    }
+    .status-text-details {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+    .status-item-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: 0.3px;
+    }
+    .status-item-engine {
+      font-size: 0.76rem;
+      color: var(--text-dim);
+    }
+    .status-meta-side {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    .status-undetected-cell {
+      text-align: right;
+      min-width: 145px;
+    }
+    .status-undetected-heading {
+      font-size: 0.65rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: #ec4899;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+    .status-undetected-text {
+      font-size: 0.88rem;
+      color: #cbd5e1;
+      font-weight: 600;
+    }
+    .status-undetected-text.glow-pink {
+      color: #f472b6;
+      text-shadow: 0 0 10px rgba(244, 114, 182, 0.4);
+    }
+    .status-pill-cell {
+      min-width: 125px;
+      display: flex;
+      justify-content: center;
+    }
+    .status-cyber-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 7px 16px;
+      border-radius: 8px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.6px;
+      width: 100%;
+      text-transform: uppercase;
+    }
+    .status-cyber-badge.badge-safe {
+      background: rgba(16, 185, 129, 0.14);
+      border: 1px solid rgba(16, 185, 129, 0.5);
+      color: #10b981;
+      box-shadow: 0 0 14px rgba(16, 185, 129, 0.15);
+    }
+    .status-cyber-badge.badge-updating {
+      background: rgba(245, 158, 11, 0.14);
+      border: 1px solid rgba(245, 158, 11, 0.5);
+      color: #f59e0b;
+      box-shadow: 0 0 14px rgba(245, 158, 11, 0.15);
+    }
+    .status-cyber-badge.badge-planned {
+      background: rgba(56, 189, 248, 0.14);
+      border: 1px solid rgba(56, 189, 248, 0.5);
+      color: #38bdf8;
+    }
+    .status-action-cell {
+      min-width: 130px;
+      display: flex;
+      justify-content: flex-end;
+    }
+    .status-cyber-btn {
+      padding: 9px 20px;
+      border-radius: 8px;
+      font-size: 0.84rem;
+      font-weight: 700;
+      letter-spacing: 0.4px;
+      color: #ffffff;
+      background: linear-gradient(135deg, #ec4899 0%, #be185d 100%);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      box-shadow: 0 4px 14px rgba(236, 72, 153, 0.35);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+      min-width: 130px;
+      text-align: center;
+    }
+    .status-cyber-btn:hover {
+      background: linear-gradient(135deg, #f43f5e 0%, #a855f7 100%);
+      box-shadow: 0 6px 20px rgba(244, 63, 94, 0.5);
+      transform: translateY(-1px);
+    }
+    .status-cyber-btn.btn-trial {
+      background: linear-gradient(135deg, #9333ea 0%, #00f2fe 100%);
+      box-shadow: 0 4px 14px rgba(0, 242, 254, 0.25);
+    }
+    .status-cyber-btn.btn-trial:hover {
+      background: linear-gradient(135deg, #a855f7 0%, #38bdf8 100%);
+      box-shadow: 0 6px 20px rgba(0, 242, 254, 0.45);
+    }
+    @media (max-width: 860px) {
+      .status-cyber-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+      }
+      .status-meta-side {
+        width: 100%;
+        justify-content: space-between;
+        gap: 12px;
+      }
+      .status-undetected-cell {
+        text-align: left;
+        min-width: auto;
+      }
+      .status-pill-cell {
+        min-width: auto;
+      }
+      .status-action-cell {
+        min-width: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cyber Background Canvas -->
+  <canvas id="cyber-canvas"></canvas>
+
+  <!-- Sticky Cyber Header -->
+  <header class="header-sticky">
+    <div class="container nav-content">
+      <a href="#hero" class="brand-wrapper">
+        <img src="./logos/blackmatrix_logo.jpg" alt="BLΛCKMΛTRIX AX Logo" class="brand-logo-img">
+        <span class="brand-title">BLΛCKMΛTRIX</span>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#products" class="nav-link">Products</a></li>
+          <li><a href="#status" class="nav-link">Status</a></li>
+          <li><a href="#pricing" class="nav-link">Pricing</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Discord button -->
+        <a href="https://discord.gg/WzhQ497uPe" target="_blank" rel="noopener noreferrer" class="nav-discord-btn tactile-btn" title="Join BLΛCKMΛTRIX Discord">
+          <svg class="discord-nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.929 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.894.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+          </svg>
+          <span class="discord-btn-text">Discord</span>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-btn" class="mobile-menu-btn tactile-btn" aria-label="Toggle navigation menu">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-nav-menu" class="mobile-nav-menu">
+      <div class="mobile-nav-inner">
+        <a href="#hero" class="mobile-nav-link active">🏠 Home</a>
+        <a href="#products" class="mobile-nav-link">🎮 Products</a>
+        <a href="#status" class="mobile-nav-link">🟢 Status Matrix</a>
+        <a href="#pricing" class="mobile-nav-link">💎 Pricing & Passes</a>
+        <a href="#faq" class="mobile-nav-link">❓ FAQ & Help</a>
+        <a href="./terms-of-service/" class="mobile-nav-link">📜 Terms of Service</a>
+        <a href="https://discord.gg/WzhQ497uPe" target="_blank" class="mobile-nav-discord-btn">
+          <span>🚀 Join Discord (2,850+ Members)</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="container">
+      <h1 class="hero-glow-title">BLΛCKMΛTRIX</h1>
+      <p class="hero-subtitle">
+        The premier platform for next-generation gaming software, humanized aimbots, and 24/7 autonomous farming bots engineered for 2026.
+      </p>
+
+      <!-- The Iconic Dual Category Switcher from Proposal -->
+      <div class="hero-category-selector">
+        <button id="hero-btn-cheats" class="category-hero-btn cheats-theme tactile-btn active">
+          <span>CHEATS</span>
+          <span class="btn-badge-count">4 PRODUCTS AVAILABLE</span>
+        </button>
+        <button id="hero-btn-bots" class="category-hero-btn bots-theme tactile-btn">
+          <span>BOTS</span>
+          <span class="btn-badge-count">5 SYSTEMS AVAILABLE</span>
+        </button>
+        <button id="hero-btn-tools" class="category-hero-btn tools-theme tactile-btn">
+          <span>TOOLS</span>
+          <span class="btn-badge-count">1 TOOL AVAILABLE</span>
+        </button>
+      </div>
+
+            <!-- Quick Filter Pills -->
+      <div class="filter-tabs">
+        <button class="filter-pill tactile-btn active" data-filter="all">All Products (10)</button>
+        <button class="filter-pill tactile-btn" data-filter="cheat">🎯 Cheats</button>
+        <button class="filter-pill tactile-btn" data-filter="bot">🤖 Bots</button>
+        <button class="filter-pill tactile-btn" data-filter="tool">🛠️ Tools</button>
+        <button class="filter-pill tactile-btn" data-filter="ready">🟢 Available</button>
+        <button class="filter-pill tactile-btn" data-filter="progress">⚙️ In Development</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section (Exact Proposal Visual Design) -->
+  <section id="products" class="products-section">
+    <div class="container">
+      <div class="products-grid">
+
+        <!-- 1. Counter-Strike 2 (Cheat) -->
+        <div class="product-card" data-type="cheat" data-status="ready" data-key="cs2">
+          <div class="card-header-row">
+            <div class="card-logo-box">
+              <img src="./logos/cs2_logo.png" alt="Counter-Strike 2" class="card-logo-img">
+            </div>
+            <div class="card-status-pill status-ready">
+              <span class="dot"></span>
+              <span>AVAILABLE</span>
+            </div>
+          </div>
+          <h3 class="card-title">Counter-Strike 2</h3>
+          <p class="card-features-summary">
+            Aimbot • Skeleton ESP • Triggerbot • 2-Axis RCS • 2D Radar • Bomb Timer • Bunnyhop
+          </p>
+          <div class="card-tags-row">
+            <span class="spec-tag tag-purple">VAC BYPASS</span>
+            <span class="spec-tag tag-cyan">EXTERNAL</span>
+            <span class="spec-tag tag-emerald">HWID SPOOFER</span>
+          </div>
+          <div class="card-footer-row">
+            <div class="card-price-display">
+              <span class="price-val">10€</span>
+              <span class="price-sub">/ Month</span>
+            </div>
+            <a href="./products/counter-strike-2/" class="btn-view-product tactile-btn" style="text-decoration:none; display:inline-flex; align-items:center; justify-content:center;">VIEW PRODUCT</a>
+          </div>
+        </div>
+
+        <!-- 2. The Isle Evrima (Cheat) -->
+        <div class="product-card" data-type="cheat" data-status="progress" data-key="the_isle">
+          <div class="card-header-row">
+            <div class="card-logo-box">
+              <img src="./logos/the_isle_logo.png" alt="The Isle Evrima" class="card-logo-img">
+            </div>
+            <div class="card-status-pill status-progress">
+              <span class="dot"></span>
+              <span>WIP</span>
+            </div>
+          </div>
+          <h3 class="card-title">The Isle Evrima</h3>
+          <p class="card-features-summary">
+            Dino ESP • Growth Tracker • Water Radar • Speedhack • Stamina
+          </p>
+          <div class="card-tags-row">
+            <span class="spec-tag tag-purple">EAC BYPASS</span>
+            <span class="spec-tag tag-cyan">EXTERNAL</span>
+            
+          </div>
+          <div class="card-footer-row">
+            <div class="card-price-display">
+              <span class="price-val">10€</span>
+              <span class="price-sub">/ Month</span>
+            </div>
+            <a href="./products/the-isle-evrima/" class="btn-view-product tactile-btn" style="text-decoration:none; display:inline-flex; align-items:center; justify-content:center;">VIEW PRODUCT</a>
+          </div>
+        </div>
+
+        <!-- 3. HayDay All-in-One Bot ⭐ (Bot) -->
+        <div class="product-card bot-card" data-type="bot" data-status="ready" data-key="hayday_aio">
+          <div class="card-header-row">
+            <div class="card-logo-box">
+              <img src="./logos/hayday_chicken_logo.png" alt="HayDay All-in-One Bot" class="card-logo-img">
+            </div>
+            <div class="card-status-pill status-ready">
+              <span class="dot"></span>
+              <span>AVAILABLE</span>
+            </div>
+          </div>
+          <h3 class="card-title">HayDay All-in-One ⭐</h3>
+          <p class="card-features-summary">
+            Auto-Harvest • Machine Queue • Roadside Shop • Animal Care
+          </p>
+          <div class="card-tags-row">
+            <span class="spec-tag tag-purple">ADB</span>
+            <span class="spec-tag tag-cyan">EMULATOR</span>
+            <span class="spec-tag tag-green">FREE TRIAL</span>
+          </div>
+          <div class="card-footer-row">
+            <div class="card-price-display">
+              <span class="price-val">0€ / 15€</span>
+              <span class="price-sub">Trial / Month</span>
+            </div>
+            <a href="./products/hayday-all-in-one-bot/" class="btn-view-product bot-btn tactile-btn" style="text-decoration:none; display:inline-flex; align-items:center; justify-content:center;">VIEW PRODUCT</a>
+          </div>
+        </div>
+
+        <!-- 4. HayDay Only Harvest Bot (Bot) -->
+        <div class="product-card bot-card" data-type="bot" data-status="ready" data-key="hayday_harvest">
+          <div class="card-header-row">
+            <div class="card-logo-box">
+              <img src="./logos/hayday_chicken_logo.png" alt="HayDay Harvest Bot" class="card-logo-img">
+            </div>
+            <div class="card-status-pill status-ready">
+              <span class="dot"></span>
+              <span>AVAILABLE</span>
+            </div>
+          </div>
+          <h3 class="card-title">HayDay Only Harvest</h3>
+          <p class="card-features-summary">
+            Ultra-Speed Harvest • Wheat Cycle • Silo Protection • Tool Drop Farming
+          </p>
+          <div class="card-tags-row">
+            <span class="spec-tag tag-purple">ADB</span>
+            <span class="spec-tag tag-cyan">EMULATOR</span>
+            <span class="spec-tag tag-green">FREE TRIAL</span>
+          </div>
+          <div class="card-footer-row">
+            <div class="card-price-display">
+              <span class="price-val">0€ / 10€</span>
+              <span class="price-sub">Trial / Month</span>
+            </div>
+            <a href="./products/hayday-harvest-bot/" class="btn-view-product bot-btn tactile-btn" style="text-decoration:none; display:inline-flex; align-items:center; justify-content:center;">VIEW PRODUCT</a>
+          </div>
+        </div>
+
+        <!-- 5. Clash of Clans Bot (Bot) -->
+        <div class="product-card bot-card" data-type="bot" data-status="progress" data-key="coc_bot">
+          <div class="card-header-row">
+            <div class="card-logo-box">
+              <img src="./logos/clash_of_clans_barbarian.jpg" alt="Clash of Clans Bot" class="card-logo-img">
+            </div>
+            <div class="card-status-pill status-planned">
+              <span class="dot"></span>
+              <span>PLANNED</span>
+            </div>
+          </div>
+          <h3 class="card-title">Clash of Clans Bot</h3>
+          <p class="card-features-summary">
+            Dead Base Finder • Auto-Raid • Smart Wall Upgrade • Trophy Farm
+          </p>
+          <div class="card-tags-row">
+            <span class="spec-tag tag-purple">ADB</span>
+            <span class="spec-tag tag-cyan">EMULATOR</span>
+            <span class="spec-tag tag-green">FREE TRIAL</span>
+          </div>
+          <div class="card-footer-row">
+            <div class="card-price-display">
+              <span class="price-val">0€ / 10€</span>
+              <span class="price-sub">Trial / Month</span>
+            </div>
+            <a href="./products/clash-of-clans-bot/" class="btn-view-product bot-btn tactile-btn" style="text-decoration:none; display:inline-flex; align-items:center; justify-content:center;">VIEW PRODUCT</a>
+          </div>
+        </div>
+
+        <!-- 6. Fartnite (Cheat) -->
+        <div class="product-card" data-type="cheat" data-status="progress" data-key="fortnite">
+          <div class="card-header-row">
+            <div class="card-logo-box">
+              <img src="./logos/fortnite_logo.png" alt="Fartnite" class="card-logo-img">
+            </div>
+            <div class="card-status-pill status-planned">
+              <span class="dot"></span>
+              <span>PLANNED</span>
+            </div>
+          </div>
+          <h3 class="card-title">Fartnite</h3>
+          <p class="card-features-summary">
+            Vector Aimbot • Player Skeleton • Item Glow • Drop Predictor
+          </p>
+          <div class="card-tags-row">
+            <span class="spec-tag tag-purple">EAC BYPASS</span>
+            <span class="spec-tag tag-cyan">EXTERNAL</span>
+            <span class="spec-tag">HWID SPOOFER</span>
+          </div>
+          <div class="card-footer-row">
+            <div class="card-price-display">
+              <span class="price-val">10€</span>
+              <span class="price-sub">/ Month</span>
+            </div>
+            <a href="./products/fortnite/" class="btn-view-product tactile-btn" style="text-decoration:none; display:inline-flex; align-items:center; justify-content:center;">VIEW PRODUCT</a>
+          </div>
+        </div>
+
+        <!-- 7. Battlefield 6 (Cheat) -->
+        <div class="product-card" data-type="cheat" data-status="progress" data-key="battlefield6">
+          <div class="card-header-row">
+            <div class="card-logo-box">
+              <img src="./logos/battlefield6_logo.png" alt="Battlefield 6" class="card-logo-img">
+            </div>
+            <div class="card-status-pill status-planned">
+              <span class="dot"></span>
+              <span>PLANNED</span>
+            </div>
+          </div>
+          <h3 class="card-title">Battlefield 6</h3>
+          <p class="card-features-summary">
+            Vehicle ESP • Target Lock • 360° Threat Radar • No-Spread
+          </p>
+          <div class="card-tags-row">
+            <span class="spec-tag tag-purple">EAC BYPASS</span>
+            <span class="spec-tag tag-cyan">EXTERNAL</span>
+            <span class="spec-tag">HWID SPOOFER</span>
+          </div>
+          <div class="card-footer-row">
+            <div class="card-price-display">
+              <span class="price-val">10€</span>
+              <span class="price-sub">/ Month</span>
+            </div>
+            <a href="./products/battlefield-6/" class="btn-view-product tactile-btn" style="text-decoration:none; display:inline-flex; align-items:center; justify-content:center;">VIEW PRODUCT</a>
+          </div>
+        </div>
+
+        <!-- 8. Crypto Trading Bot (Bot) -->
+        <div class="product-card bot-card" data-type="bot" data-status="progress" data-key="crypto_bot">
+          <div class="card-header-row">
+            <div class="card-logo-box" style="padding: 6px;">
+              <img src="./logos/trading_bot_logo.svg" alt="Crypto Trading Bot" class="card-logo-img">
+            </div>
+            <div class="card-status-pill status-progress">
+              <span class="dot"></span>
+              <span>WIP</span>
+            </div>
+          </div>
+          <h3 class="card-title">Crypto Trading Bot</h3>
+          <p class="card-features-summary">
+            Binance / Bybit API • Grid & DCA Strategy • Stop-Loss AI • Webhooks
+          </p>
+          <div class="card-tags-row">
+            <span class="spec-tag tag-purple">ENCRYPTED KEY</span>
+            <span class="spec-tag tag-cyan">HIGH FREQ</span>
+            <span class="spec-tag">AUTO PNL</span>
+          </div>
+          <div class="card-footer-row">
+            <div class="card-price-display">
+              <span class="price-val">VIP</span>
+              <span class="price-sub">/ Custom</span>
+            </div>
+            <a href="./products/crypto-trading-bot/" class="btn-view-product bot-btn tactile-btn" style="text-decoration:none; display:inline-flex; align-items:center; justify-content:center;">VIEW PRODUCT</a>
+          </div>
+        </div>
+
+        <!-- 9. Pokémon GO Utility (Bot) -->
+        <div class="product-card bot-card" data-type="bot" data-status="progress" data-key="pokemon_go">
+          <div class="card-header-row">
+            <div class="card-logo-box">
+              <img src="./logos/pokemon_go_logo.png" alt="Pokémon GO" class="card-logo-img">
+            </div>
+            <div class="card-status-pill status-progress">
+              <span class="dot"></span>
+              <span>EVAL</span>
+            </div>
+          </div>
+          <h3 class="card-title">Pokémon GO Utility</h3>
+          <p class="card-features-summary">
+            GPX Route Walking • Fast-Catch • PokéStop Spin • Cooldown Guard
+          </p>
+          <div class="card-tags-row">
+            <span class="spec-tag tag-cyan">GPS SPOOF</span>
+            <span class="spec-tag tag-purple">IOS</span>
+            <span class="spec-tag tag-green">ANDROID</span>
+          </div>
+          <div class="card-footer-row">
+            <div class="card-price-display">
+              <span class="price-val">Soon</span>
+              <span class="price-sub">/ Beta</span>
+            </div>
+            <a href="./products/pokemon-go/" class="btn-view-product bot-btn tactile-btn" style="text-decoration:none; display:inline-flex; align-items:center; justify-content:center;">VIEW PRODUCT</a>
+          </div>
+        </div>
+
+        <!-- 10. HWID Spoofer (Tool) -->
+        <div class="product-card" data-type="tool" data-status="progress" data-key="hwid_spoofer">
+          <div class="card-header-row">
+            <div class="card-logo-box">
+              <img src="./logos/hwid_spoofer_logo.svg" alt="HWID Spoofer" class="card-logo-img">
+            </div>
+            <div class="card-status-pill status-progress">
+              <span class="dot"></span>
+              <span>WIP</span>
+            </div>
+          </div>
+          <h3 class="card-title">HWID Spoofer</h3>
+          <p class="card-features-summary">
+            Ring-0 Virtualizer • Motherboard • GPU • MAC Address • Disk Serials
+          </p>
+          <div class="card-tags-row">
+            <span class="spec-tag tag-cyan">KERNEL DRIVER</span>
+            <span class="spec-tag tag-purple">ALL ANTICHEATS</span>
+            <span class="spec-tag tag-green">RESTART PERSIST</span>
+          </div>
+          <div class="card-footer-row">
+            <div class="card-price-display">
+              <span class="price-val">10€</span>
+              <span class="price-sub">/ Month</span>
+            </div>
+            <a href="./products/hwid-spoofer/" class="btn-view-product tactile-btn" style="text-decoration:none; display:inline-flex; align-items:center; justify-content:center;">VIEW PRODUCT</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Status Section (BLΛCKMΛTRIX 2026 - Real-Time Service Matrix)
+       ========================================================================== -->
+  <section id="status" class="status-section">
+    <div class="container">
+      <!-- Status Heading (BLΛCKMΛTRIX 2026 Cyber Title) -->
+      <div class="status-header-wrap">
+        <h2 class="status-cyber-title">STATUS</h2>
+        <div class="status-title-glow-line"></div>
+      </div>
+
+      <!-- Category Group 1: CHEATS -->
+      <div class="status-category-header cat-cheats">
+        <span>CHEATS</span>
+      </div>
+
+      <div class="status-cards-stack">
+        <!-- 1. CS2 -->
+        <div class="status-cyber-row" onclick="openProductModal('cs2')">
+          <div class="status-info-side">
+            <div class="status-thumb-wrapper">
+              <img src="./logos/cs2_logo.png" alt="Counter-Strike 2" width="32" height="32">
+            </div>
+            <div class="status-text-details">
+              <span class="status-item-title">Counter-Strike 2</span>
+              <span class="status-item-engine">Valve Anti-Cheat (VAC 3) • External</span>
+            </div>
+          </div>
+          <div class="status-meta-side">
+            <div class="status-pill-cell">
+              <span class="status-cyber-badge badge-safe">✔ AVAILABLE</span>
+            </div>
+            <div class="status-action-cell">
+              <button class="status-cyber-btn tactile-btn" onclick="event.stopPropagation(); window.open('https://discord.gg/WzhQ497uPe', '_blank')">
+                Purchase Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. The Isle Evrima -->
+        <div class="status-cyber-row" onclick="openProductModal('the_isle')">
+          <div class="status-info-side">
+            <div class="status-thumb-wrapper">
+              <img src="./logos/the_isle_logo.png" alt="The Isle Evrima" width="32" height="32">
+            </div>
+            <div class="status-text-details">
+              <span class="status-item-title">The Isle Evrima</span>
+              <span class="status-item-engine">Easy Anti-Cheat (EAC)  External</span>
+            </div>
+          </div>
+          <div class="status-meta-side">
+            <div class="status-pill-cell">
+              <span class="status-cyber-badge badge-updating">⚙ UPDATING</span>
+            </div>
+            <div class="status-action-cell">
+              <button class="status-cyber-btn tactile-btn" onclick="event.stopPropagation(); window.open('https://discord.gg/WzhQ497uPe', '_blank')">
+                Purchase Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Fartnite -->
+        <div class="status-cyber-row" onclick="openProductModal('fortnite')">
+          <div class="status-info-side">
+            <div class="status-thumb-wrapper">
+              <img src="./logos/fortnite_logo.png" alt="Fartnite" width="32" height="32">
+            </div>
+            <div class="status-text-details">
+              <span class="status-item-title">Fartnite</span>
+              <span class="status-item-engine">Dual EAC & BattlEye • Kernel Driver Shield</span>
+            </div>
+          </div>
+          <div class="status-meta-side">
+            <div class="status-pill-cell">
+              <span class="status-cyber-badge badge-planned">📅 PLANNED</span>
+            </div>
+            <div class="status-action-cell">
+              <button class="status-cyber-btn tactile-btn" onclick="event.stopPropagation(); window.open('https://discord.gg/WzhQ497uPe', '_blank')">
+                Purchase Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Battlefield 6 -->
+        <div class="status-cyber-row" onclick="openProductModal('battlefield6')">
+          <div class="status-info-side">
+            <div class="status-thumb-wrapper">
+              <img src="./logos/battlefield6_logo.png" alt="Battlefield 6" width="32" height="32">
+            </div>
+            <div class="status-text-details">
+              <span class="status-item-title">Battlefield 6</span>
+              <span class="status-item-engine">BattlEye Engine • Dynamic Thread Masking</span>
+            </div>
+          </div>
+          <div class="status-meta-side">
+            <div class="status-pill-cell">
+              <span class="status-cyber-badge badge-planned">📅 PLANNED</span>
+            </div>
+            <div class="status-action-cell">
+              <button class="status-cyber-btn tactile-btn" onclick="event.stopPropagation(); window.open('https://discord.gg/WzhQ497uPe', '_blank')">
+                Purchase Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category Group 2: BOTS -->
+      <div class="status-category-header cat-bots">
+        <span>BOTS</span>
+      </div>
+
+      <div class="status-cards-stack">
+        <!-- 5. HayDay All-in-One Bot -->
+        <div class="status-cyber-row bot-row" onclick="openProductModal('hayday_aio')">
+          <div class="status-info-side">
+            <div class="status-thumb-wrapper">
+              <img src="./logos/hayday_chicken_logo.png" alt="HayDay All-in-One Bot" width="32" height="32">
+            </div>
+            <div class="status-text-details">
+              <span class="status-item-title">HayDay All-in-One Bot ⭐</span>
+              <span class="status-item-engine">Supercell Heuristic Safe • Android Bridge</span>
+            </div>
+          </div>
+          <div class="status-meta-side">
+            <div class="status-pill-cell">
+              <span class="status-cyber-badge badge-safe">✔ AVAILABLE</span>
+            </div>
+            <div class="status-action-cell">
+              <button class="status-cyber-btn btn-trial tactile-btn" onclick="event.stopPropagation(); window.open('https://discord.gg/WzhQ497uPe', '_blank')">
+                0€ Free Trial
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. HayDay Only Harvest Bot -->
+        <div class="status-cyber-row bot-row" onclick="openProductModal('hayday_harvest')">
+          <div class="status-info-side">
+            <div class="status-thumb-wrapper">
+              <img src="./logos/hayday_chicken_logo.png" alt="HayDay Only Harvest" width="32" height="32">
+            </div>
+            <div class="status-text-details">
+              <span class="status-item-title">HayDay Only Harvest Bot</span>
+              <span class="status-item-engine">Supercell Anti-Bot Safe • Low CPU Farming</span>
+            </div>
+          </div>
+          <div class="status-meta-side">
+            <div class="status-pill-cell">
+              <span class="status-cyber-badge badge-safe">✔ AVAILABLE</span>
+            </div>
+            <div class="status-action-cell">
+              <button class="status-cyber-btn btn-trial tactile-btn" onclick="event.stopPropagation(); window.open('https://discord.gg/WzhQ497uPe', '_blank')">
+                0€ Free Trial
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. Clash of Clans Bot -->
+        <div class="status-cyber-row bot-row" onclick="openProductModal('coc_bot')">
+          <div class="status-info-side">
+            <div class="status-thumb-wrapper">
+              <img src="./logos/clash_of_clans_barbarian.jpg" alt="Clash of Clans Bot" width="32" height="32">
+            </div>
+            <div class="status-text-details">
+              <span class="status-item-title">Clash of Clans Bot</span>
+              <span class="status-item-engine">Supercell Heuristics • Smart AI Raid Engine</span>
+            </div>
+          </div>
+          <div class="status-meta-side">
+            <div class="status-pill-cell">
+              <span class="status-cyber-badge badge-planned">📅 PLANNED</span>
+            </div>
+            <div class="status-action-cell">
+              <button class="status-cyber-btn btn-trial tactile-btn" onclick="event.stopPropagation(); window.open('https://discord.gg/WzhQ497uPe', '_blank')">
+                0€ Free Trial
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. Crypto Trading Bot -->
+        <div class="status-cyber-row bot-row" onclick="openProductModal('crypto_bot')">
+          <div class="status-info-side">
+            <div class="status-thumb-wrapper">
+              <img src="./logos/trading_bot_logo.svg" alt="Crypto Trading Bot" width="32" height="32">
+            </div>
+            <div class="status-text-details">
+              <span class="status-item-title">Crypto Trading Bot</span>
+              <span class="status-item-engine">Binance & Bybit • Client-Side Encryption</span>
+            </div>
+          </div>
+          <div class="status-meta-side">
+            <div class="status-pill-cell">
+              <span class="status-cyber-badge badge-updating">⚙ UPDATING</span>
+            </div>
+            <div class="status-action-cell">
+              <button class="status-cyber-btn tactile-btn" onclick="event.stopPropagation(); window.open('https://discord.gg/WzhQ497uPe', '_blank')">
+                VIP Access
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 9. Pokémon GO Utility -->
+        <div class="status-cyber-row bot-row" onclick="openProductModal('pokemon_go')">
+          <div class="status-info-side">
+            <div class="status-thumb-wrapper">
+              <img src="./logos/pokemon_go_logo.png" alt="Pokémon GO Utility" width="32" height="32">
+            </div>
+            <div class="status-text-details">
+              <span class="status-item-title">Pokémon GO Utility</span>
+              <span class="status-item-engine">iOS & Android • GPX Cooldown Guard</span>
+            </div>
+          </div>
+          <div class="status-meta-side">
+            <div class="status-pill-cell">
+              <span class="status-cyber-badge badge-planned">📅 PLANNED</span>
+            </div>
+            <div class="status-action-cell">
+              <button class="status-cyber-btn tactile-btn" onclick="event.stopPropagation(); window.open('https://discord.gg/WzhQ497uPe', '_blank')">
+                View Info
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category Group 3: TOOLS -->
+      <div class="status-category-header cat-tools" style="margin-top: 36px;">
+        <span>TOOLS</span>
+      </div>
+
+      <div class="status-cards-stack">
+        <!-- 10. HWID Spoofer -->
+        <div class="status-cyber-row" onclick="openProductModal('hwid_spoofer')">
+          <div class="status-info-side">
+            <div class="status-thumb-wrapper" style="border-color: rgba(245, 158, 11, 0.4);">
+              <img src="./logos/hwid_spoofer_logo.svg" alt="HWID Spoofer" width="32" height="32">
+            </div>
+            <div class="status-text-details">
+              <span class="status-item-title">HWID Spoofer</span>
+              <span class="status-item-engine">Ring-0 Kernel Virtualizer • EAC / BattlEye / Vanguard</span>
+            </div>
+          </div>
+          <div class="status-meta-side">
+            <div class="status-pill-cell">
+              <span class="status-cyber-badge badge-updating">⚙ WIP</span>
+            </div>
+            <div class="status-action-cell">
+              <a href="https://discord.gg/WzhQ497uPe" target="_blank" class="status-purchase-btn tactile-btn" onclick="event.stopPropagation()">Purchase Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Modern 2026 Redesign - Section 2: Transparent Pricing & Free Trials
+       ========================================================================== -->
+  <section id="pricing" class="pricing-section">
+    <div class="container">
+      <div class="section-header-center">
+        <span class="section-tag">TRANSPARENT TERMS</span>
+        <h2 class="section-title">Transparent Pricing & Subscriptions</h2>
+        <p class="section-desc">
+          Get started with our <strong>free 0€ Free Trial</strong> or choose a full monthly pass for unrestricted gaming performance.
+        </p>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- Card 1: Free Trial -->
+        <div class="pricing-card">
+          <h3 class="plan-name">Free Trial</h3>
+          <p class="plan-desc">Perfect for testing our bots risk-free on your PC or Android emulator.</p>
+          <div class="plan-price-wrap">
+            <span class="plan-price">0€</span>
+            <span class="plan-period">/ Trial Period</span>
+          </div>
+          <ul class="plan-features-list">
+            <li class="plan-feature-item"><span class="check-icon">✓</span> HayDay Only Harvest Bot Access</li>
+            <li class="plan-feature-item"><span class="check-icon">✓</span> HayDay All-in-One Bot Test Run</li>
+            <li class="plan-feature-item"><span class="check-icon">✓</span> Clash of Clans Bot Beta Access</li>
+            <li class="plan-feature-item"><span class="check-icon">✓</span> No credit card or payment required</li>
+          </ul>
+          <button class="tactile-btn" style="margin-top: auto; padding: 12px; border-radius: 12px; background: rgba(255, 255, 255, 0.08); border: 1px solid var(--border-glass); color: #ffffff;" onclick="window.open('https://discord.gg/WzhQ497uPe', '_blank')">
+            🚀 Start 0€ Free Trial
+          </button>
+        </div>
+
+        <!-- Card 2: Cheats Pass -->
+        <div class="pricing-card">
+          <h3 class="plan-name">Cheats Monthly Pass</h3>
+          <p class="plan-desc">Full access to your selected cheat software with humanized aimbots and precision ESP overlays.</p>
+          <div class="plan-price-wrap">
+            <span class="plan-price">10€</span>
+            <span class="plan-period">/ Month per game</span>
+          </div>
+          <ul class="plan-features-list">
+            <li class="plan-feature-item"><span class="check-icon">✓</span> Counter-Strike 2 (Aimbot, ESP, Radar)</li>
+            <li class="plan-feature-item"><span class="check-icon">✓</span> The Isle Evrima (Dino ESP, Speed, Stamina)</li>
+            <li class="plan-feature-item"><span class="check-icon">✓</span> Fartnite & Battlefield 6 (Priority Access)</li>
+            <li class="plan-feature-item"><span class="check-icon">✓</span> Automatic updates upon game patches</li>
+            <li class="plan-feature-item"><span class="check-icon">✓</span> 24/7 Discord support & setup assistance</li>
+          </ul>
+          <button class="tactile-btn" style="margin-top: auto; padding: 12px; border-radius: 12px; background: linear-gradient(135deg, #00f2fe 0%, #2563eb 100%); color: #ffffff;" onclick="window.open('https://discord.gg/WzhQ497uPe', '_blank')">
+            🛒 Subscribe Now (10€)
+          </button>
+        </div>
+
+        <!-- Card 3: Bot Flagship Pass -->
+        <div class="pricing-card featured">
+          <span class="featured-badge">MOST POPULAR CHOICE ⭐</span>
+          <h3 class="plan-name">HayDay All-in-One</h3>
+          <p class="plan-desc">The ultimate all-inclusive package for maximum harvest yield, automated roadside sales, and 24/7 animal care.</p>
+          <div class="plan-price-wrap">
+            <span class="plan-price">15€</span>
+            <span class="plan-period">/ Month</span>
+          </div>
+          <ul class="plan-features-list">
+            <li class="plan-feature-item"><span class="check-icon">✓</span> All Harvest Bot features included</li>
+            <li class="plan-feature-item"><span class="check-icon">✓</span> Smart roadside shop auto-sales at max price</li>
+            <li class="plan-feature-item"><span class="check-icon">✓</span> All production machines & animal pens automated</li>
+            <li class="plan-feature-item"><span class="check-icon">✓</span> Multi-Account & Multi-Emulator Support</li>
+            <li class="plan-feature-item"><span class="check-icon">✓</span> Prioritized VIP Discord channel</li>
+          </ul>
+          <button class="tactile-btn" style="margin-top: auto; padding: 12px; border-radius: 12px; background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%); color: #ffffff; font-weight: 700;" onclick="window.open('https://discord.gg/WzhQ497uPe', '_blank')">
+            ⭐ Get All-in-One (15€)
+          </button>
+        </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Modern 2026 Redesign - Section 4: FAQ & Discord Community
+       ========================================================================== -->
+  <section id="faq" class="faq-section">
+    <div class="container">
+      <div class="section-header-center">
+        <span class="section-tag">FREQUENTLY ASKED QUESTIONS</span>
+        <h2 class="section-title">FAQ & Knowledge Base</h2>
+        <p class="section-desc">Everything you need to know about installation, security, and automated updates.</p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>How does the 0€ Free Trial work?</span>
+            <span class="faq-arrow">▼</span>
+          </div>
+          <div class="faq-answer">
+            You can download our bots (e.g. HayDay Only Harvest or HayDay All-in-One) completely free and test them on your PC or Android emulator. No credit card or payment details are required to begin.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Are the cheats and bots safe from bans (Undetected)?</span>
+            <span class="faq-arrow">▼</span>
+          </div>
+          <div class="faq-answer">
+            Yes! All our software solutions utilize state-of-the-art 2026 kernel-level and external stealth technology. For mobile bots, we simulate human Bezier touch trajectories and randomized delay intervals, making them completely indistinguishable from real human players.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>What happens when a game receives an update?</span>
+            <span class="faq-arrow">▼</span>
+          </div>
+          <div class="faq-answer">
+            Our automated cloud system updates offsets and memory signatures typically within hours of a game patch. You never need to reinstall – the software automatically updates itself seamlessly.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>How fast do I receive my access key after payment?</span>
+            <span class="faq-arrow">▼</span>
+          </div>
+          <div class="faq-answer">
+            Instant delivery. Keys and setup instructions are automatically dispatched via our Discord bot immediately after purchase confirmation.
+          </div>
+        </div>
+      </div>
+
+      <!-- Discord Banner -->
+      <div class="discord-banner">
+        <h3 style="font-size: 1.8rem; font-weight: 800; color: #ffffff;">Join the BLΛCKMΛTRIX Community</h3>
+        <p style="color: #cbd5e1; max-width: 550px;">
+          Connect with over <strong>2,850 active players</strong>, receive instant support assistance, and be the first to know about new game releases and bot updates.
+        </p>
+        <a href="https://discord.gg/WzhQ497uPe" target="_blank" rel="noopener noreferrer" class="discord-btn tactile-btn">
+          💬 Join Discord Server
+        </a>
+        </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <div class="brand-wrapper" style="margin-bottom: 8px;">
+            <img src="./logos/blackmatrix_logo.jpg" alt="BLΛCKMΛTRIX" class="brand-logo-img">
+            <span class="brand-title">BLΛCKMΛTRIX</span>
+          </div>
+          <p class="footer-brand-desc">
+            Precision software and intelligent automation for modern gamers. Engineered with passion for peak performance and undetected stealth in 2026.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Products</h4>
+          <ul class="footer-links-list">
+            <li><a href="./products/counter-strike-2/" class="footer-link">Counter-Strike 2</a></li>
+            <li><a href="./products/the-isle-evrima/" class="footer-link">The Isle Evrima</a></li>
+            <li><a href="./products/fortnite/" class="footer-link">Fartnite</a></li>
+            <li><a href="./products/battlefield-6/" class="footer-link">Battlefield 6</a></li>
+            <li><a href="./products/hayday-all-in-one-bot/" class="footer-link">HayDay All-in-One Bot</a></li>
+            <li><a href="./products/hayday-harvest-bot/" class="footer-link">HayDay Harvest Bot</a></li>
+            <li><a href="./products/clash-of-clans-bot/" class="footer-link">Clash of Clans Bot</a></li>
+            <li><a href="./products/crypto-trading-bot/" class="footer-link">Crypto Trading Bot</a></li>
+            <li><a href="./products/pokemon-go/" class="footer-link">Pokémon GO Utility</a></li>
+            <li><a href="./products/hwid-spoofer/" class="footer-link">HWID Spoofer</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="#hero" class="footer-link">Home</a></li>
+            <li><a href="#status" class="footer-link">Status</a></li>
+            <li><a href="#pricing" class="footer-link">Pricing</a></li>
+            <li><a href="#faq" class="footer-link">FAQ & Support</a></li>
+            <li><a href="./terms-of-service/" class="footer-link">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 BLΛCKMΛTRIX Inc. All rights reserved. &nbsp;|&nbsp; <a href="./terms-of-service/" style="color: var(--text-dim); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-dim)'">Terms of Service</a></div>
+        <div style="display: flex; gap: 20px;">
+          <span style="color: #10b981;">● All systems operational</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Product Detail Modal -->
+  <div id="product-modal" class="modal-overlay">
+    <div class="modal-container">
+      <button id="modal-close-btn" class="modal-close-btn tactile-btn">✕</button>
+      
+      <div class="modal-header">
+        <img id="modal-logo-img" src="" alt="Product Logo" class="modal-logo">
+        <div>
+          <div id="modal-product-category" style="font-size: 0.8rem; color: var(--cyan); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px;">Category</div>
+          <h2 id="modal-product-title" style="font-size: 1.5rem; font-weight: 800; color: #ffffff; margin-bottom: 6px;">Title</h2>
+          <span id="modal-product-status" class="card-status-pill status-ready">Status</span>
+        </div>
+      </div>
+
+      <div class="modal-body">
+        <p id="modal-product-desc" style="color: #cbd5e1; font-size: 0.95rem; line-height: 1.6; margin-bottom: 16px;">Description</p>
+        
+        <h4 style="font-size: 0.85rem; text-transform: uppercase; color: var(--text-dim); letter-spacing: 1px; margin-bottom: 8px;">Technical Tags</h4>
+        <div id="modal-product-tags" class="card-tags-row"></div>
+
+        <h4 style="font-size: 0.85rem; text-transform: uppercase; color: var(--text-dim); letter-spacing: 1px; margin-top: 18px; margin-bottom: 8px;">Included Modules & Features</h4>
+        <div id="modal-product-features" class="modal-feature-list"></div>
+
+        <div style="margin-top: 20px; padding: 16px; border-radius: 12px; background: rgba(0, 242, 254, 0.05); border: 1px solid rgba(0, 242, 254, 0.2); display: flex; justify-content: space-between; align-items: center;">
+          <span style="font-size: 0.9rem; color: #cbd5e1;">Pricing Option:</span>
+          <span id="modal-product-price" style="font-size: 1.25rem; font-weight: 800; color: #ffffff;">0€ / 10€</span>
+        </div>
+      </div>
+
+      <div class="modal-actions">
+        <button class="tactile-btn" style="background: rgba(255, 255, 255, 0.06); border: 1px solid var(--border-glass); color: #ffffff; padding: 10px 20px; border-radius: 10px;" onclick="document.getElementById('product-modal').classList.remove('active')">
+          Close
+        </button>
+        <button id="modal-action-btn" class="tactile-btn" style="background: linear-gradient(135deg, #00f2fe 0%, #7c3aed 100%); color: #ffffff; padding: 10px 24px; border-radius: 10px; font-weight: 700;">
+          🚀 Unlock Access
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="./js/app.js?v=2026.30"></script>
+</body>
+</html>
